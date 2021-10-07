@@ -1,20 +1,42 @@
-public class ComparisonUC3 {
-
-	public static void main(String[] args) {
-		System.out.println("Welcome to Line Comparison Computation Program");
-
-
- 		Integer x1 = new Integer(1);
-		Integer x2 = new Integer(4);
-		Integer y1 = new Integer(1);
-		Integer y2 = new Integer(4);
-
-	  	System.out.println(x1.compareTo(y1));// Both are equal
-		System.out.println(x1.compareTo(x2)); //x1 is less than x2
-		System.out.println(x2.compareTo(y1)); // x2 is greater than y1
-
+package javapractice;
+import java.util.Scanner;
+class ComparisonCal
+{
+	 double dis;
+ 
+	 ComparisonCal(int x1,int y1,int x2,int y2)
+	 {
+	  dis=(Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1)));
+	 }
+}
+class ComparisonUC4
+{
+	public static void main(String args[])
+	
+	{
+           int x1,x2,y1,y2;
+	
+	   Scanner sc=new Scanner(System.in);
+ 
+	   System.out.println("enter x1 point");
+	   
+           x1=sc.nextInt();
+	  
+           System.out.println("enter y1 point");
+	   
+           y1=sc.nextInt();
+	 
+           System.out.println("enter x2point");
+	   
+           x2=sc.nextInt();
+	 
+           System.out.println("enter y2 point");
+	   
+           y2=sc.nextInt();
+	  
+	   ComparisonCal cd=new ComparisonCal(x1,y1,x2,y2);	    
+ 	 	    
+  	   System.out.println("distancebetween"+"("+x1+","+y1+"),"+"("+x2+","+y2+")===>"+cd.dis);
+ 
 	}
 }
-
-
-
